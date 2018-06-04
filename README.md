@@ -76,7 +76,7 @@ python train_imagenet.py --network=IGCV3 --multiplier=1.0 --gpus=0,1,2,3,4,5,6,7
 
 Please cite our papers in your publications if it helps your research:
 ```
-@article{WangWZZ16,
+@article{IGCV3,
   author    = {Ke Sun and
                Mingjie Li and
                Dong Liu and
