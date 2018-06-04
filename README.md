@@ -15,7 +15,7 @@ You can find its code [here](https://github.com/hellozting/InterleavedGroupConvo
 IGCV2 extends IGCV1 by decomposing the convolution matrix in to more structured sparse matrices, which uses a depth-wise convoultion (3 × 3) to replace the primary group convoution in IGC and uses a series of point-wise group convolutions (1 × 1).
 
 
-## Interleaved Low-Rank Group Convolutions (IGCV3)
+## Interleaved Low-Rank Group Convolutions ([IGCV3](http://arxiv.org/abs/1806.00178))
 We proposes Interleaved Low-Rank Group Convolutions, named IGCV3, extend IGCV2 by using low-rank group convolutions to replace group convoutions in IGCV2. It consists of a channel-wise spatial convolution, a low-rank group convolution with <a href="https://www.codecogs.com/eqnedit.php?latex=G_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_{1}" title="G_{1}" /></a> groups that reduces the width and a low-rank group convolution with <a href="https://www.codecogs.com/eqnedit.php?latex=G_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_{2}" title="G_{2}" /></a> groups which expands the widths back.
 
 ![IGCV3](figures/super_branch_2.PNG)
@@ -75,6 +75,19 @@ python train_imagenet.py --network=IGCV3 --multiplier=1.0 --gpus=0,1,2,3,4,5,6,7
 ## Citation
 
 Please cite our papers in your publications if it helps your research:
+```
+@article{WangWZZ16,
+  author    = {Ke Sun and
+               Mingjie Li and
+               Dong Liu and
+               Jingdong Wang},
+  title     = {{IGCV2:} Interleaved Low-Rank Group Convolutions for Efficient Deep Neural Networks},
+  journal   = {CoRR},
+  volume    = {abs/1806.00178},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1806.00178}
+}
+```
 
 ```
 @article{WangWZZ16,
